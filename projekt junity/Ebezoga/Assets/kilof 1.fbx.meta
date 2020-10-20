@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5c6e0070e378fa045bc5fa92235739c3
+guid: 7ac2770b9922ac3419741a974d4f65b5
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 757787e2655fd2a469a75bb9bc1072be, type: 2}
+      name: drewno
+    second: {fileID: 2100000, guid: acb190e8e9e430e4ab1abaaa8534d069, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal
+    second: {fileID: 2100000, guid: d7d7a14fab28a284c91e65f4a880859a, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
