@@ -52,9 +52,10 @@
     <UnityVersion>2020.1.8f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\PodazanieZaKamera.cs" />
     <Compile Include="Assets\ruchKamery.cs" />
     <Compile Include="Assets\poruszanie.cs" />
-    <Compile Include="Assets\PodazanieZaKamera.cs" />
+    <Compile Include="Assets\Cel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

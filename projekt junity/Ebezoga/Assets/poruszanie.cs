@@ -9,6 +9,9 @@ public class poruszanie : MonoBehaviour
     public float silaSkoku;
     public Rigidbody cialko;
     public Animator animatorek;
+    public Animator animatorekReki;
+    public Camera kamera;
+    public float zasieg;
     void Update()
     {
         Skok();
@@ -20,12 +23,44 @@ public class poruszanie : MonoBehaviour
         {
             animatorek.SetBool("czyDotykaZiemii", false);
         }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Strzal();
+            animatorekReki.SetBool("czyKliknal", true);
+        }
+        else
+        {
+            animatorekReki.SetBool("czyKliknal", false);
+        }
+        
     }
 
     void FixedUpdate()
     {
         Ruch();
     }
+
+
+    void Strzal()
+    {
+        
+
+
+
+        RaycastHit hit;
+        if(Physics.Raycast(kamera.transform.position, kamera.transform.forward, out hit, zasieg))
+        {
+            Debug.Log(hit.transform.name);
+
+            Cel cel = hit.transform.GetComponent<Cel>();
+            if(cel != null)
+            {
+                cel.OdejmujeZycie(10);
+            }
+        }
+    }
+
 
     void Ruch()
     {
