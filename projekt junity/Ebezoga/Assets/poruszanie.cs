@@ -12,8 +12,15 @@ public class poruszanie : MonoBehaviour
     public Animator animatorekReki;
     public Camera kamera;
     public float zasieg;
+    public float aktualnePaliwo;
+    public float maksymalnePaliwo;
+    public float silnik;
+    public float odnawianiePaliwa;
+    public bool czyMoznaZaatakowac;
+    public float cooldown;
     void Update()
     {
+        Klikanie();
         Skok();
         if (stoiNaZiemii())
         {
@@ -24,16 +31,23 @@ public class poruszanie : MonoBehaviour
             animatorek.SetBool("czyDotykaZiemii", false);
         }
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && czyMoznaZaatakowac == true)
         {
             Strzal();
             animatorekReki.SetBool("czyKliknal", true);
+            czyMoznaZaatakowac = false;
         }
         else
         {
             animatorekReki.SetBool("czyKliknal", false);
         }
-        
+
+       
+        /*if (this.animatorekReki.GetCurrentAnimatorStateInfo(0).IsName("walonko"))
+        {
+            Debug.Log("odjeto");
+
+        }*/
     }
 
     void FixedUpdate()
@@ -41,7 +55,19 @@ public class poruszanie : MonoBehaviour
         Ruch();
     }
 
-
+    void Klikanie()
+    {
+        
+        if(czyMoznaZaatakowac == false)
+        {
+            cooldown = Mathf.Max(0, cooldown - Time.deltaTime);
+        }
+        if( cooldown == 0)
+        {
+            czyMoznaZaatakowac = true;
+            cooldown = 1;
+        }
+    }
     void Strzal()
     {
         
@@ -54,9 +80,10 @@ public class poruszanie : MonoBehaviour
             Debug.Log(hit.transform.name);
 
             Cel cel = hit.transform.GetComponent<Cel>();
-            if(cel != null)
+            if (cel != null)
             {
                 cel.OdejmujeZycie(10);
+                
             }
         }
     }
@@ -103,6 +130,18 @@ public class poruszanie : MonoBehaviour
                 Debug.Log("skok");
             }
 
+        }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            if (!stoiNaZiemii() && aktualnePaliwo > 0f)
+            {
+                cialko.AddForce(Vector3.up * silnik * Time.deltaTime, ForceMode.Acceleration);
+                aktualnePaliwo = Mathf.Max(0, aktualnePaliwo - Time.deltaTime);
+            }
+        }
+        if (stoiNaZiemii())
+        {
+            aktualnePaliwo = Mathf.Min(maksymalnePaliwo, aktualnePaliwo + Time.deltaTime * odnawianiePaliwa);
         }
     }
 
