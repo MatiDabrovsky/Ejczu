@@ -56,6 +56,10 @@
     <Compile Include="Assets\PodazanieZaKamera.cs" />
     <Compile Include="Assets\ruchKamery.cs" />
     <Compile Include="Assets\poruszanie.cs" />
+    <Compile Include="Assets\SkryptGeneracjiTerenu.cs" />
+    <Compile Include="Assets\obracanie180.cs" />
+    <Compile Include="Assets\generacjaZasobow.cs" />
+    <Compile Include="Assets\LawaWyplywa.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
