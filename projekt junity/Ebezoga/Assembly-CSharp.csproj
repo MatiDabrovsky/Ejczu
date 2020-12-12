@@ -60,6 +60,7 @@
     <Compile Include="Assets\LawaWyplywa.cs" />
     <Compile Include="Assets\generacjaZasobow.cs" />
     <Compile Include="Assets\poruszanie.cs" />
+    <Compile Include="Assets\LosoweObracanie.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
