@@ -11,16 +11,16 @@ public class LosoweObracanie : MonoBehaviour
         switch (losowansko)
         {
             case 0:
-            gameObject.transform.rotation = Quaternion.Euler(-90, 0, 0);
+            gameObject.transform.eulerAngles = new Vector3(-90, 0, 0);
             break;
             case 1:
-            gameObject.transform.rotation = Quaternion.Euler(-90, 90, 0);
+            gameObject.transform.eulerAngles = new Vector3(-90, 90, 0);
             break;
             case 2:
-            gameObject.transform.rotation = Quaternion.Euler(-90, 180, 0);
+            gameObject.transform.eulerAngles = new Vector3(-90, 180, 0);
             break;
             case 3:
-            gameObject.transform.rotation = Quaternion.Euler(-90, 270, 0);
+            gameObject.transform.eulerAngles = new Vector3(-90, 270, 0);
             break;
 
         }

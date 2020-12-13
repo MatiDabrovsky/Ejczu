@@ -65,7 +65,7 @@ public class poruszanie : MonoBehaviour
         if( cooldown == 0)
         {
             czyMoznaZaatakowac = true;
-            cooldown = 1;
+            cooldown = .5f;
         }
     }
     void Strzal()
