@@ -18,6 +18,11 @@ public class poruszanie : MonoBehaviour
     public float odnawianiePaliwa;
     public bool czyMoznaZaatakowac;
     public float cooldown;
+    public GameObject paliwkoUI;
+    public GameObject pjorunUI;
+    public ParticleSystem ogienJetpacka;
+    public Light swiatloOgniaJetpacka;
+
     void Update()
     {
         Klikanie();
@@ -42,7 +47,7 @@ public class poruszanie : MonoBehaviour
             animatorekReki.SetBool("czyKliknal", false);
         }
 
-       
+
         /*if (this.animatorekReki.GetCurrentAnimatorStateInfo(0).IsName("walonko"))
         {
             Debug.Log("odjeto");
@@ -53,16 +58,17 @@ public class poruszanie : MonoBehaviour
     void FixedUpdate()
     {
         Ruch();
+        paliwkoUI.transform.localScale = new Vector3(aktualnePaliwo / maksymalnePaliwo, 1, 1);
     }
 
     void Klikanie()
     {
-        
-        if(czyMoznaZaatakowac == false)
+
+        if (czyMoznaZaatakowac == false)
         {
             cooldown = Mathf.Max(0, cooldown - Time.deltaTime);
         }
-        if( cooldown == 0)
+        if (cooldown == 0)
         {
             czyMoznaZaatakowac = true;
             cooldown = .5f;
@@ -70,12 +76,8 @@ public class poruszanie : MonoBehaviour
     }
     void Strzal()
     {
-        
-
-
-
         RaycastHit hit;
-        if(Physics.Raycast(kamera.transform.position, kamera.transform.forward, out hit, zasieg))
+        if (Physics.Raycast(kamera.transform.position, kamera.transform.forward, out hit, zasieg))
         {
             Debug.Log(hit.transform.name);
 
@@ -83,7 +85,7 @@ public class poruszanie : MonoBehaviour
             if (cel != null)
             {
                 cel.OdejmujeZycie(10);
-                
+
             }
         }
     }
@@ -94,10 +96,12 @@ public class poruszanie : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             szybkoscPoruszania = sprint;
+            pjorunUI.SetActive(true);
         }
         else
         {
             szybkoscPoruszania = 7;
+            pjorunUI.SetActive(false);
         }
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
@@ -107,13 +111,13 @@ public class poruszanie : MonoBehaviour
         {
             animatorek.SetBool("czyChodzi", false);
         }
-            float ruchHoryzontalny = Input.GetAxisRaw("Horizontal");
-            float ruchVertykalny = Input.GetAxisRaw("Vertical");
+        float ruchHoryzontalny = Input.GetAxisRaw("Horizontal");
+        float ruchVertykalny = Input.GetAxisRaw("Vertical");
 
-            Vector3 ruch = new Vector3(ruchHoryzontalny, 0, ruchVertykalny) * szybkoscPoruszania * Time.fixedDeltaTime;
-            Vector3 NowaPozycja = cialko.position + cialko.transform.TransformDirection(ruch);
+        Vector3 ruch = new Vector3(ruchHoryzontalny, 0, ruchVertykalny) * szybkoscPoruszania * Time.fixedDeltaTime;
+        Vector3 NowaPozycja = cialko.position + cialko.transform.TransformDirection(ruch);
 
-            cialko.MovePosition(NowaPozycja);
+        cialko.MovePosition(NowaPozycja);
 
 
 
@@ -137,12 +141,21 @@ public class poruszanie : MonoBehaviour
             {
                 cialko.AddForce(Vector3.up * silnik * Time.deltaTime, ForceMode.Acceleration);
                 aktualnePaliwo = Mathf.Max(0, aktualnePaliwo - Time.deltaTime);
+                ogienJetpacka.Play();
+                swiatloOgniaJetpacka.enabled = true;
             }
+
         }
         if (stoiNaZiemii())
         {
             aktualnePaliwo = Mathf.Min(maksymalnePaliwo, aktualnePaliwo + Time.deltaTime * odnawianiePaliwa);
         }
+        if (stoiNaZiemii() || aktualnePaliwo <= 0f || !Input.GetKey(KeyCode.Space))
+        {
+            ogienJetpacka.Stop();
+            swiatloOgniaJetpacka.enabled = false;
+        }
+
     }
 
     bool stoiNaZiemii()
