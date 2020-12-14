@@ -6036,7 +6036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b02088bb1897a0344b6a7bb8399e98c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SzybkoscWyplywania: 0
+  SzybkoscWyplywania: 0.2
   pozycjaY: 0
 --- !u!1001 &825886947
 PrefabInstance:
@@ -6583,8 +6583,8 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
-  prewarm: 1
+  looping: 0
+  prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -11499,6 +11499,10 @@ PrefabInstance:
     - target: {fileID: 7478836886804433286, guid: 885041050f6117e4ca9b8c768ca5be94, type: 3}
       propertyPath: m_Name
       value: drzwkoPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 7713332831611354747, guid: 885041050f6117e4ca9b8c768ca5be94, type: 3}
+      propertyPath: zycie
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7818805489501819708, guid: 885041050f6117e4ca9b8c768ca5be94, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17191,7 +17195,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
