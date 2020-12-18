@@ -52,6 +52,7 @@
     <UnityVersion>2020.1.8f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\LosoweObracanie.cs" />
     <Compile Include="Assets\Cel.cs" />
     <Compile Include="Assets\SkryptGeneracjiTerenu.cs" />
     <Compile Include="Assets\PodazanieZaKamera.cs" />
@@ -60,7 +61,7 @@
     <Compile Include="Assets\LawaWyplywa.cs" />
     <Compile Include="Assets\generacjaZasobow.cs" />
     <Compile Include="Assets\poruszanie.cs" />
-    <Compile Include="Assets\LosoweObracanie.cs" />
+    <Compile Include="Assets\comboskrypt.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
