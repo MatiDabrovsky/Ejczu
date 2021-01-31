@@ -18,13 +18,29 @@ public class poruszanie : MonoBehaviour
     public float odnawianiePaliwa;
     public bool czyMoznaZaatakowac;
     public float cooldown;
+    public float zycie;
     public GameObject paliwkoUI;
     public GameObject pjorunUI;
+    public GameObject zycieUI;
     public ParticleSystem ogienJetpacka;
     public Light swiatloOgniaJetpacka;
+    RaycastHit hitLawa;
+    public GameObject paliSieUI;
 
     void Update()
     {
+        if (Physics.Raycast(transform.position, Vector3.down, out hitLawa, 0.5f))
+        {
+            if (hitLawa.collider.name.Equals("Lawa"))
+            {
+                paliSieUI.active = true;
+                zycie -= 0.1f;
+            }
+            else
+            {
+                paliSieUI.active = false;
+            }
+        }
         Klikanie();
         Skok();
         if (stoiNaZiemii())
@@ -34,6 +50,7 @@ public class poruszanie : MonoBehaviour
         else
         {
             animatorek.SetBool("czyDotykaZiemii", false);
+            paliSieUI.active = false;
         }
 
         if (Input.GetButtonDown("Fire1") && czyMoznaZaatakowac == true)
@@ -59,6 +76,7 @@ public class poruszanie : MonoBehaviour
     {
         Ruch();
         paliwkoUI.transform.localScale = new Vector3(aktualnePaliwo / maksymalnePaliwo, 1, 1);
+        zycieUI.transform.localScale = new Vector3(zycie / 100, 1, 1);
     }
 
     void Klikanie()
