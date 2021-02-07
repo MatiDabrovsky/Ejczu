@@ -18,7 +18,11 @@ public class ruchKamery : MonoBehaviour
 
     void Update()
     {
-        RotacjaKamery();
+        if (Pauza.Zapauzowano == false)
+        {
+            RotacjaKamery();
+        }
+        
     }
 
     void RotacjaKamery()
