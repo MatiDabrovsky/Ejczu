@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Cel : MonoBehaviour
 {
-    public int zycie = 100;
+    public int zycie;
 
     public void OdejmujeZycie ( int ile)
     {
@@ -17,7 +17,7 @@ public class Cel : MonoBehaviour
 
     void Zniszcz()
     {
-        Destroy(gameObject);
+        Destroy(gameObject, 0.25f);
     }
 
 }

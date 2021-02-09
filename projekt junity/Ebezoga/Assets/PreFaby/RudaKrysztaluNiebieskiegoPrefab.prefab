@@ -23,7 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3933939719356813171}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.98, y: 0.392, z: -5.304}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 7633951478843841007}
   - component: {fileID: 7633951478843841006}
   - component: {fileID: 7633951478843841005}
+  - component: {fileID: 7224542950499378131}
   m_Layer: 0
   m_Name: rudaKrysztaluNiebieski
   m_TagString: Untagged
@@ -128,3 +129,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8664978102845035497, guid: 826f88f3ca256ba4aaf70e2d5a7c5c69, type: 3}
+--- !u!114 &7224542950499378131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7633951478843841001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3451fdc332cc25845944179ce1ce57fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zycie: 20

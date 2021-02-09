@@ -6066,7 +6066,7 @@ MonoBehaviour:
   animatorek: {fileID: 5866666021962240667}
   animatorekReki: {fileID: 1584192595}
   kamera: {fileID: 963194227}
-  zasieg: 2
+  zasieg: 3
   aktualnePaliwo: 2
   maksymalnePaliwo: 2
   silnik: 750
@@ -12098,8 +12098,8 @@ MonoBehaviour:
   - {fileID: 999762095}
   - {fileID: 1687264057}
   - {fileID: 65770914}
-  siatkaX: 20
-  siatkaY: 20
+  siatkaX: 50
+  siatkaY: 50
   odstep: 20
   poczatekSpawnu: {x: -200, y: 30, z: -200}
 --- !u!4 &1180330151
@@ -12215,25 +12215,6 @@ RectTransform:
   m_AnchoredPosition: {x: 70, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1224929872 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 378310726012768183, guid: 17ee7e701a74f064884e947a2b96f657, type: 3}
-  m_PrefabInstance: {fileID: 6379543497191981156}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1224929876
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1224929872}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6951420979646933153, guid: f2837a3ae9f1d0147b77d68dde502f79, type: 3}
 --- !u!1 &1269273607
 GameObject:
   m_ObjectHideFlags: 0
