@@ -64,6 +64,8 @@
     <Compile Include="Assets\Skrypty\MainMenu.cs" />
     <Compile Include="Assets\Skrypty\generacjaZasobow.cs" />
     <Compile Include="Assets\Skrypty\poruszanie.cs" />
+    <Compile Include="Assets\tornadoPrzeciwnik.cs" />
+    <Compile Include="Assets\strzalTornada.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

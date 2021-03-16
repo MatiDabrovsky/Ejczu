@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class Pauza : MonoBehaviour
 {
     public static bool Zapauzowano = false;
+    public static bool ekwipunekON = false;
     public GameObject pauzaMenuUI;
+    public GameObject ekwipunekUI;
 
     void Start()
     {
@@ -14,7 +16,7 @@ public class Pauza : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && ekwipunekON == false)
         {
             if (Zapauzowano)
             {
@@ -24,7 +26,35 @@ public class Pauza : MonoBehaviour
             {
                 Pauzuj();
             }
-        }    
+        }
+        if (Input.GetKeyDown(KeyCode.E) && Zapauzowano == false)
+        {
+            if (ekwipunekON)
+            {
+                WylaczEkwipunek();
+            }
+            else
+            {
+                WlaczEkwipunek();
+            }
+        }
+    }
+
+    public void WylaczEkwipunek()
+    {
+        Time.timeScale = 1f;
+        ekwipunekUI.SetActive(false);
+        ekwipunekON = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+    public void WlaczEkwipunek()
+    {
+        ekwipunekUI.SetActive(true);
+        ekwipunekON = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Time.timeScale = 0f;
     }
 
     public void Wznow()

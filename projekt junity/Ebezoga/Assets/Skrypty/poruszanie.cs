@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class poruszanie : MonoBehaviour
 {
@@ -22,13 +23,35 @@ public class poruszanie : MonoBehaviour
     public GameObject paliwkoUI;
     public GameObject pjorunUI;
     public GameObject zycieUI;
+    public GameObject kilof;
+    public GameObject pistolet;
     public ParticleSystem ogienJetpacka;
     public Light swiatloOgniaJetpacka;
     RaycastHit hitLawa;
     public GameObject paliSieUI;
+    public int gold;
+    public int blueCrystal;
+    public int redCrystal;
+    public int coal;
+    public int stone;
+    public Text goldText;
+    public Text blueCrystalText;
+    public Text redCrystalText;
+    public Text coalText;
+    public Text stoneText;
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            kilof.active = true;
+            pistolet.active = false;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            kilof.active = false;
+            pistolet.active = true;
+        }
         if (Physics.Raycast(transform.position, Vector3.down, out hitLawa, 0.5f))
         {
             if (hitLawa.collider.name.Equals("Lawa"))
@@ -53,7 +76,7 @@ public class poruszanie : MonoBehaviour
             paliSieUI.active = false;
         }
 
-        if (Input.GetButtonDown("Fire1") && czyMoznaZaatakowac == true)
+        if (Input.GetButtonDown("Fire1") && czyMoznaZaatakowac == true && kilof.active == true)
         {
             Strzal();
             animatorekReki.SetBool("czyKliknal", true);
@@ -70,6 +93,12 @@ public class poruszanie : MonoBehaviour
             Debug.Log("odjeto");
 
         }*/
+
+            goldText.text = ("" + gold);
+            blueCrystalText.text = ("" + blueCrystal);
+            redCrystalText.text = ("" + redCrystal);
+            coalText.text = ("" + coal);
+            stoneText.text = ("" + stone);
     }
 
     void FixedUpdate()
@@ -100,6 +129,11 @@ public class poruszanie : MonoBehaviour
             Debug.Log(hit.transform.name);
 
             Cel cel = hit.transform.GetComponent<Cel>();
+            tornadoPrzeciwnik tornado = hit.transform.GetComponent<tornadoPrzeciwnik>();
+            if(tornado != null)
+            {
+                tornado.zycie--;
+            }
             if (cel != null)
             {
                 cel.OdejmujeZycie(10);
@@ -107,6 +141,7 @@ public class poruszanie : MonoBehaviour
             }
         }
     }
+
 
 
     void Ruch()
@@ -180,5 +215,5 @@ public class poruszanie : MonoBehaviour
     {
         return Physics.Raycast(transform.position, Vector3.down, 0.5f);
     }
-    
+
 }
