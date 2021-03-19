@@ -20,6 +20,7 @@ public class poruszanie : MonoBehaviour
     public bool czyMoznaZaatakowac;
     public float cooldown;
     public float zycie;
+    float poprzednieZycie = 100;
     public GameObject paliwkoUI;
     public GameObject pjorunUI;
     public GameObject zycieUI;
@@ -39,6 +40,8 @@ public class poruszanie : MonoBehaviour
     public Text redCrystalText;
     public Text coalText;
     public Text stoneText;
+    float liczniczek = 100;
+    float staryLiczniczek;
 
     void Update()
     {
@@ -105,7 +108,16 @@ public class poruszanie : MonoBehaviour
     {
         Ruch();
         paliwkoUI.transform.localScale = new Vector3(aktualnePaliwo / maksymalnePaliwo, 1, 1);
-        zycieUI.transform.localScale = new Vector3(zycie / 100, 1, 1);
+        zycieUI.transform.localScale = new Vector3(liczniczek / 100, 1, 1);
+        if(zycie < poprzednieZycie)
+        {
+            staryLiczniczek = 100;
+            liczniczek = Mathf.Lerp(poprzednieZycie, zycie, Time.deltaTime * 15f);
+            staryLiczniczek -= 100 - liczniczek;
+            poprzednieZycie = staryLiczniczek;
+        }
+        Debug.Log("licziczek " + liczniczek);
+        Debug.Log("poprzedniezycie " +poprzednieZycie);
     }
 
     void Klikanie()

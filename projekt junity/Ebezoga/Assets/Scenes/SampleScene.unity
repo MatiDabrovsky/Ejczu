@@ -6251,6 +6251,7 @@ MonoBehaviour:
   redCrystalText: {fileID: 669986683}
   coalText: {fileID: 1551673994}
   stoneText: {fileID: 702054206}
+  wartoscLiczniczka: {fileID: 0}
 --- !u!1 &528144028
 GameObject:
   m_ObjectHideFlags: 0
