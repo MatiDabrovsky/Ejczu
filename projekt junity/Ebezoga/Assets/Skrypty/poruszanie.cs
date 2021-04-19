@@ -40,8 +40,12 @@ public class poruszanie : MonoBehaviour
     public Text redCrystalText;
     public Text coalText;
     public Text stoneText;
+    public Text ammoText;
+    public float ammo;
+    public GameObject pocisk;
     float liczniczek = 100;
     float staryLiczniczek;
+
 
     void Update()
     {
@@ -49,11 +53,13 @@ public class poruszanie : MonoBehaviour
         {
             kilof.active = true;
             pistolet.active = false;
+            ammoText.gameObject.active = false;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             kilof.active = false;
             pistolet.active = true;
+            ammoText.gameObject.active = true;
         }
         if (Physics.Raycast(transform.position, Vector3.down, out hitLawa, 0.5f))
         {
@@ -88,6 +94,10 @@ public class poruszanie : MonoBehaviour
         else
         {
             animatorekReki.SetBool("czyKliknal", false);
+        }
+        if(Input.GetButtonDown("Fire1") && pistolet.active == true)
+        {
+            strzalPistolet();
         }
 
 
@@ -154,6 +164,16 @@ public class poruszanie : MonoBehaviour
         }
     }
 
+    void strzalPistolet()
+    {
+        ammoText.text = "Ammo: " + ammo + "/10";
+        if(ammo > 0)
+        {
+            Instantiate(pocisk, kamera.transform.position, kamera.transform.rotation);
+            ammo--;
+        }
+        ammoText.text = "Ammo: " + ammo + "/10";
+    }
 
 
     void Ruch()
