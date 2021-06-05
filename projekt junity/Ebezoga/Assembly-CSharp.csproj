@@ -59,15 +59,16 @@
     <Compile Include="Assets\Skrypty\SkryptGeneracjiTerenu.cs" />
     <Compile Include="Assets\Skrypty\PodazanieZaKamera.cs" />
     <Compile Include="Assets\Skrypty\obracanie180.cs" />
+    <Compile Include="Assets\misja.cs" />
     <Compile Include="Assets\Skrypty\ruchKamery.cs" />
     <Compile Include="Assets\Skrypty\Pauza.cs" />
     <Compile Include="Assets\tornadoPrzeciwnik.cs" />
     <Compile Include="Assets\Skrypty\LawaWyplywa.cs" />
     <Compile Include="Assets\Skrypty\MainMenu.cs" />
+    <Compile Include="Assets\pocisk.cs" />
     <Compile Include="Assets\Skrypty\generacjaZasobow.cs" />
     <Compile Include="Assets\Skrypty\poruszanie.cs" />
-    <Compile Include="Assets\pocisk.cs" />
-    <Compile Include="Assets\misja.cs" />
+    <Compile Include="Assets\poziomTrudnosci.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

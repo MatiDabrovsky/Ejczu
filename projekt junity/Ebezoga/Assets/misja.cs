@@ -38,7 +38,7 @@ public class misja : MonoBehaviour
 
     void Update()
     {
-        if(menuMisji.active == true && Input.GetKeyDown(KeyCode.Q))
+        if(menuMisji.active == true && Input.GetKeyUp(KeyCode.Q))
         {
             menuMisji.active = false;
         }
@@ -48,6 +48,7 @@ public class misja : MonoBehaviour
             OtwartoMenu();
         }
     }
+    //Input.GetKeyDown(KeyCode.Q)
     void OtwartoMenu()
     {
         g = graczek.GetComponent<poruszanie>().gold;
