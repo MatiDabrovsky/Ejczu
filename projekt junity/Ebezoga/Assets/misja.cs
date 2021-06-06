@@ -31,7 +31,7 @@ public class misja : MonoBehaviour
         s = graczek.GetComponent<poruszanie>().stone;
         for (int i = 0; i < 7; i++)
         {
-            misjaIlosc[i] = Random.Range(1, 5);
+            misjaIlosc[i] = Random.Range(1+LawaWyplywa.PSW, 4+LawaWyplywa.PSW);
         }
     }
 

@@ -6528,6 +6528,7 @@ MonoBehaviour:
   ammoText: {fileID: 377334972}
   ammo: 10
   pocisk: {fileID: 655319175}
+  uderzenieRock: {fileID: 1406555521813085378, guid: 386781900b4a83b4d8ac000ef513a963, type: 3}
 --- !u!1 &528144028
 GameObject:
   m_ObjectHideFlags: 0
