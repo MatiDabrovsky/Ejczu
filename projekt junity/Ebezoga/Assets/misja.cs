@@ -62,6 +62,6 @@ public class misja : MonoBehaviour
         redCrystalText.text = rc + "/" + misjaIlosc[2];
         coalText.text = c + "/" + misjaIlosc[3];
         stoneText.text = s + "/" + misjaIlosc[4];
-        uraniumText.text = "0/" + misjaIlosc[5];
+        uraniumText.text = "1/" + 1;
     }
 }
