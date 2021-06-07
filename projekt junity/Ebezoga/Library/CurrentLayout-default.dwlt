@@ -67,9 +67,9 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &4
@@ -140,7 +140,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_MinSize: {x: 578, y: 492}
   m_MaxSize: {x: 14001, y: 14042}
   vertical: 1
-  controlID: 69
+  controlID: 59
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -240,7 +240,7 @@ MonoBehaviour:
   m_MinSize: {x: 578, y: 492}
   m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 70
+  controlID: 60
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_MinSize: {x: 303, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 117
+  controlID: 61
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_MinSize: {x: 303, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 19
+  controlID: 62
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -523,7 +523,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 386ac8ffb46ac8ffce6bc8ffd86bc8ff9c6ec8ffa66ec8ffae6ec8ff2ae1d2ff44e3d2ff5ee6d2fff6e6d2ffc4ead2ff44f0d2ff7cf2d2fffaf2d2ff10f4d2ff16f4d2ff1af4d2ff20f4d2ff28f4d2ffb828f6ffd628f6ff4e2bf6ff28dbf6ff22def6ffa2def6ffd8e9f6ffe8f4ffff60fbffff884000005442000080420000de420000b09100001293000046270100d6270100ba2f010020310100
+      m_ExpandedIDs: 54c5d3ffd0c5d3ffe6c6d3ffecc6d3fff0c6d3fff6c6d3fffec6d3ff5ec2e0ffeef9ffff60fbfffff4ffffff464300005e430000f6430000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -636,9 +636,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 418.09213, y: 309.38718, z: -370.26337}
+    m_Target: {x: 559.016, y: 320.5857, z: -1093.0483}
     speed: 2
-    m_Value: {x: 418.09213, y: 309.38718, z: -370.26337}
+    m_Value: {x: 559.016, y: 320.5857, z: -1093.0483}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -689,9 +689,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 544.8609
+    m_Target: 398.52887
     speed: 2
-    m_Value: 544.8609
+    m_Value: 398.52887
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -709,7 +709,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.100242205, y: 0.83217126, z: -0.52150613, w: -0.15993609}
+  m_LastSceneViewRotation: {x: 0.018194571, y: 0.96645033, z: -0.07146326, w: 0.2460558}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -923,7 +923,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 41608
+  m_LastSelectedObjectID: 17048
 --- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -962,21 +962,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Skrypty
+    - Assets
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Skrypty
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\spec gierka\Ejczu\projekt junity\Ebezoga
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 5e460000
-    m_LastClickedID: 18014
-    m_ExpandedIDs: 00000000d2450000d445000000ca9a3b
+    m_SelectedIDs: 5c410000
+    m_LastClickedID: 16732
+    m_ExpandedIDs: 000000005c4100005e41000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1004,7 +1004,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d2450000d4450000
+    m_ExpandedIDs: 000000005c4100005e410000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

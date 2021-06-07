@@ -48,7 +48,14 @@ public class poruszanie : MonoBehaviour
     float staryLiczniczek;
     public GameObject uderzenieRock;
 
-
+    void Start()
+    {
+        gold = 0;
+        blueCrystal = 0;
+        redCrystal = 0;
+        coal = 0;
+        stone = 0;
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -173,16 +180,19 @@ public class poruszanie : MonoBehaviour
             Destroy(efekcik, 2f);
         }
     }
-
+    public void OdswiezanieAmmo()
+    {
+        ammoText.text = "Ammo: " + ammo;
+    }
     void strzalPistolet()
     {
-        ammoText.text = "Ammo: " + ammo + "/10";
+        ammoText.text = "Ammo: " + ammo;
         if(ammo > 0)
         {
             Instantiate(pocisk, kamera.transform.position, kamera.transform.rotation);
             ammo--;
         }
-        ammoText.text = "Ammo: " + ammo + "/10";
+        ammoText.text = "Ammo: " + ammo;
     }
 
 

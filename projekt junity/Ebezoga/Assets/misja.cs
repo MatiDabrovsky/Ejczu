@@ -24,7 +24,13 @@ public class misja : MonoBehaviour
 
     private void Start()
     {
+        zrobionaMisja = 0;
         graczek = GameObject.Find("gracz");
+        g = 0;
+        bc = 0;
+        rc = 0;
+        c = 0;
+        s = 0;
         g = graczek.GetComponent<poruszanie>().gold;
         bc = graczek.GetComponent<poruszanie>().blueCrystal;
         rc = graczek.GetComponent<poruszanie>().redCrystal;

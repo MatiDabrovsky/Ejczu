@@ -6067,7 +6067,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Ammo: 10/10'
+  m_Text: 'Ammo: 10'
 --- !u!222 &377334973
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6560,7 +6560,7 @@ MonoBehaviour:
   animatorek: {fileID: 5866666021962240667}
   animatorekReki: {fileID: 1584192595}
   kamera: {fileID: 963194227}
-  zasieg: 3
+  zasieg: 4
   aktualnePaliwo: 2
   maksymalnePaliwo: 2
   silnik: 750
@@ -8009,9 +8009,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '0
-
-'
+  m_Text: 1
 --- !u!222 &794909677
 CanvasRenderer:
   m_ObjectHideFlags: 0

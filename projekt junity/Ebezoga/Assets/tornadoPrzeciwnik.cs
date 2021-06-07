@@ -14,6 +14,7 @@ public class tornadoPrzeciwnik : MonoBehaviour
     GameObject graczek;
     public float obrazenia;
     public float zycie;
+    bool dodanoAmmo = false;
 
     void Start()
     {
@@ -24,6 +25,13 @@ public class tornadoPrzeciwnik : MonoBehaviour
     {
         if(zycie <= 0)
         {
+            graczek = GameObject.Find("gracz");
+            if (dodanoAmmo == false)
+            {
+                graczek.GetComponent<poruszanie>().ammo += 10;
+                dodanoAmmo = true;
+                graczek.GetComponent<poruszanie>().OdswiezanieAmmo();
+            }
             Destroy(gameObject, 0.25f);
         }
 
