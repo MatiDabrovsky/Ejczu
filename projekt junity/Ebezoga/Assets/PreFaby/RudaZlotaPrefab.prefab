@@ -27,6 +27,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zycie: 50
+  wrog: {fileID: 5306000739271955423, guid: 33de80b8ecf991445b4f15b812c427f1, type: 3}
 --- !u!1 &6379543498445624267
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,11 +17,11 @@ public class LawaWyplywa : MonoBehaviour
         }
         else if (PSW == 2)
         {
-            SzybkoscWyplywania = 0.1f;
+            SzybkoscWyplywania = 0.08f;
         }
         else if(PSW == 3)
         {
-            SzybkoscWyplywania = 0.2f;
+            SzybkoscWyplywania = 0.12f;
         }
     }
     void FixedUpdate()

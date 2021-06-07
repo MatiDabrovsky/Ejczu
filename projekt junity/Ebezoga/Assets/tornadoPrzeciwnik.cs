@@ -42,7 +42,7 @@ public class tornadoPrzeciwnik : MonoBehaviour
             {
                 if (szybkoscStrzelania <= 0)
                 {
-                    szybkoscStrzelania = Random.Range(0.5f, 2f);
+                    szybkoscStrzelania = Random.Range(3.5f - LawaWyplywa.PSW, 4.5f-LawaWyplywa.PSW);
                     Strzal();
                 }
             }

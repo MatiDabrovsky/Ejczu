@@ -20,6 +20,7 @@ public class misja : MonoBehaviour
     int s;
     int u;
     int[] misjaIlosc = new int [6];
+    static public int zrobionaMisja = 0;
 
     private void Start()
     {
@@ -46,6 +47,15 @@ public class misja : MonoBehaviour
         {
             menuMisji.active = true;
             OtwartoMenu();
+        }
+        if(g >= misjaIlosc[0] &&
+            bc >= misjaIlosc[1] &&
+            rc >= misjaIlosc[2] &&
+            c >= misjaIlosc[3] &&
+            s >= misjaIlosc[4])
+        {
+            zrobionaMisja = 1;
+            Debug.Log("Skonczono misje");
         }
     }
     //Input.GetKeyDown(KeyCode.Q)

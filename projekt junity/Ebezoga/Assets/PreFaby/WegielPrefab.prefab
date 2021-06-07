@@ -58,6 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zycie: 30
+  wrog: {fileID: 5306000739271955423, guid: 33de80b8ecf991445b4f15b812c427f1, type: 3}
 --- !u!1001 &2758021681757455148
 PrefabInstance:
   m_ObjectHideFlags: 0

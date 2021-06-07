@@ -142,3 +142,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zycie: 20
+  wrog: {fileID: 5306000739271955423, guid: 33de80b8ecf991445b4f15b812c427f1, type: 3}

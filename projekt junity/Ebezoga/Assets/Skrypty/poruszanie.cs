@@ -132,6 +132,8 @@ public class poruszanie : MonoBehaviour
         Debug.Log("poprzedniezycie " +poprzednieZycie);
         if(zycie <= 0)
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             SceneManager.LoadScene("przegrales");
         }
     }
