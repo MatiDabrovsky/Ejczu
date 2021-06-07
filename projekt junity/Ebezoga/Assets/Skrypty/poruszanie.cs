@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class poruszanie : MonoBehaviour
 {
@@ -45,6 +46,7 @@ public class poruszanie : MonoBehaviour
     public GameObject pocisk;
     float liczniczek = 100;
     float staryLiczniczek;
+    public GameObject uderzenieRock;
 
 
     void Update()
@@ -128,6 +130,10 @@ public class poruszanie : MonoBehaviour
         }
         Debug.Log("licziczek " + liczniczek);
         Debug.Log("poprzedniezycie " +poprzednieZycie);
+        if(zycie <= 0)
+        {
+            SceneManager.LoadScene("przegrales");
+        }
     }
 
     void Klikanie()
@@ -161,6 +167,8 @@ public class poruszanie : MonoBehaviour
                 cel.OdejmujeZycie(10);
 
             }
+            GameObject efekcik = Instantiate(uderzenieRock, hit.point, Quaternion.LookRotation(hit.normal));
+            Destroy(efekcik, 2f);
         }
     }
 

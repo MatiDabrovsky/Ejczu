@@ -31,7 +31,7 @@ public class misja : MonoBehaviour
         s = graczek.GetComponent<poruszanie>().stone;
         for (int i = 0; i < 7; i++)
         {
-            misjaIlosc[i] = Random.Range(1, 5);
+            misjaIlosc[i] = Random.Range(1+LawaWyplywa.PSW, 4+LawaWyplywa.PSW);
         }
     }
 
@@ -62,6 +62,6 @@ public class misja : MonoBehaviour
         redCrystalText.text = rc + "/" + misjaIlosc[2];
         coalText.text = c + "/" + misjaIlosc[3];
         stoneText.text = s + "/" + misjaIlosc[4];
-        uraniumText.text = "0/" + misjaIlosc[5];
+        uraniumText.text = "1/" + 1;
     }
 }

@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/przegrales.unity
+    guid: 718ae3a019507d64597e06f29aadb7ca
+  - enabled: 1
+    path: Assets/wygrales.unity
+    guid: c531c079968ee7749ace2c59d74b2813
   m_configObjects: {}
